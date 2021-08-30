@@ -1,0 +1,41 @@
+x=int(input("enter a number: "))
+for i in range(x+1):
+    if i*i>=x:
+        break
+if i*i!=x:
+    print(x, "is not a perfect square")
+else:
+    print("The square of", x,"is",i)
+    
+  linear search 
+    x=42
+epsilon=0.01
+step=epsilon**2
+guess=0.0
+numguess=0
+while abs(guess**2-x)>=epsilon and guess<=x:
+    guess+=step
+    numguess+=1
+print("number of guess is", numguess)
+if abs(guess**2-x)>=epsilon:
+    print("no square")
+else:
+    print(guess, "closest square root of", x)
+    
+    bisectio. search
+x=int(input("enter a number:"))
+epsilon=0.000001
+left=0
+right=x
+numguess=0
+guess=(right+left)/2.0
+while abs(guess**2-x )> epsilon:
+    numguess+=1
+    if guess**2 < x:
+        left=guess
+    else:
+        right=guess
+    guess=(right+left)/2.0
+print("the square of" ,x ,"is", guess)
+print("it took ",numguess," number of guesses")
+    
